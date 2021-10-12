@@ -170,35 +170,44 @@ working group
 </div>
 
 </div>
-<div class="row" style="margin-top:50px ;padding-bottom:50px; background-color:blue;color:white;align-content:center">
-<div class="col-4">
-$462B<br>
+<div style="text-align: center;background-color:#1F45FC;color:white;">
+<div class="row" style="margin-top:50px ;padding-bottom:50px;align-content:center">
+<div class="col-4" style="float: right;">
+<p> <h1>462B</h1></p>
 Quarterly volume traded
     </div>
     <div class="col-4" style="justify-content: center;align-items:center">
-    100+<br>
+    
+<p> <h1>100+</h1></p>
+
 Countries supported
     </div>
     <div class="col-4">
-    68+M<br>
+ 
+<p> <h1>68+M</h1></p>
+
 Verified users
     </div>
 
 </div>
-<div class="row">
-    
+
 </div>
+<div style="text-align: center;">
+<P><strong> <h3> <img src="images/team.png" alt="Idea" style="width:94px;height:94px;">  Team </h3></strong></p><br>
+<div class="row" style="padding-top:50px ;padding-bottom:50px; border-bottom: 6px solid #767073">
+  
+<div class="col">
+    <img src="images/brian.png" alt="Idea" ">
+    </div>
+    <div class="col">
+    <img src="images/micheal.png" alt="Idea" ">
+        
+    </div>
+</div>
+</div>  
 <div class="row"></div>
 <div class="row"></div>
 </div>
 
-<script>
-    $('#nav').affix({
-      offset: {
-        top: $('header').height()
-      }
-});	
-
-</script>
     </body>
 </html>
