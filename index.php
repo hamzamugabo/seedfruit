@@ -1,3 +1,7 @@
+<?php
+session_start();
+print_r($_SESSION['user'])
+?>
 <html>
     <head>
         <title></title>
@@ -21,6 +25,7 @@
 	</div> -->
 	<div>
 	<?php include('header.php') ?>
+    
 </div>
 
 <div class="container" style="padding-bottom:100px">

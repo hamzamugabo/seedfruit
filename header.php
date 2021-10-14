@@ -74,7 +74,7 @@
                     <a style="font-size: larger;font-weight:bolder;" class="nav-link btn btn-link text-dark" type="button" href="login.php"  >Login</a>                  
                 </li>
                 <li class="nav-item">
-                    <a style="font-size: larger;font-weight:bolder;" class="nav-link btn btn-link text-dark" type="button" href="register.php"  >Register</a>                  
+                    <a style="font-size: larger;font-weight:bolder;" class="nav-link btn btn-link text-dark" type="button" href="auth.php?action=logout"  >Logout</a>                  
                 </li>
                 <li class="nav-item">
                     <a style="font-size: larger;font-weight:bolder;" class="nav-link btn btn-primary text-white" type="button" href="home.php"  >Get Started</a>

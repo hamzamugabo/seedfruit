@@ -1,10 +1,16 @@
+<?php
+session_start();
+//$_SESSION['email']='hamzamugabo@gmail.com'; 
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>Sign In</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -26,15 +32,34 @@
                     </div>
 
                     <div class="signin-form">
-                        <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                        <h2 class="form-title">Sign In</h2>
+                        <?php 
+                        // isset($_SESSION['err'])?$err=$_SESSION['err']:$err=null;
+                        if(isset($_SESSION['err']) && !empty($_SESSION['err'])) {
+                           $err=$_SESSION['err'];
+                           $now = time();
+                         if($now > $_SESSION['expire'])
+
+    {
+        unset($_SESSION["err"]);
+        }
+                        }else{
+                            $err=null;
+
+                        }
+                        echo'<span  style="font-size:20px;color:red">'.$err.'</span>';
+                        ?>
+                        <form method="POST" action="auth.php?action=login" class="register-form" id="login-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="your_name" id="your_name" placeholder="Your Name"/>
+                                <!-- <input type="text" name="your_name" id="your_name" placeholder="Your Email"/> -->
+                                <input  type="email" name="email" placeholder="Your Email" required autocomplete="email" autofocus>
+                           
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+                                <input id="password" type="password" placeholder="Password" name="pass" required autocomplete="current-password">
+                                <!-- <input type="password" name="your_pass" id="your_pass" placeholder="Password"/> -->
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
@@ -64,3 +89,4 @@
     <script src="js/main.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
+
